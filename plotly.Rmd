@@ -3,8 +3,13 @@ title: "Plotly"
 output: html_document
 ---
 
+<br>
+
+### NYC Restaurant Inspection
+
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 
@@ -36,5 +41,7 @@ plotly_mc = mht_chinese %>%
   )
 
 plotly_mc = plotly_mc %>% layout(legend = list(orientation = 'h'))
+
+plotly_mc
 ```
 
