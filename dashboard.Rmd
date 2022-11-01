@@ -1,5 +1,5 @@
 ---
-title: "about"
+title: "plotly"
 author: "Yingchen Xu"
 date: "2022-10-29"
 output: html_document

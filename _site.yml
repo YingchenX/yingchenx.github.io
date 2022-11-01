@@ -3,10 +3,14 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
-    - icon: <i class="fa-solid fa-file-user"></i>
-      href: ./resource/Yingchen Xu - Resume.pdf
+    - text: "Resume"
+      href: resume.html
+    - text: "Plotly"
+      href: plotly.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/yingchen-xu-bb0558232/
     - icon: fa-envelope fa-lg
       href: mailto:<yx2711@cumc.columbia.edu>
     - icon: fa-github fa-lg

@@ -1,30 +1,42 @@
 ---
 title: "Yingchen Xu"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  html_document
 ---
 
 Second-Year MPH in Biostatistics <br>
 Columbia University Mailman School of Public Health
 
+<br>
 
 <center>
-<img src="images/picture.jpg" style="width:70%">
+<img src="image/picture.jpg" style="width:70%">
+
+Here's a picture of myself!
 </center>
 
+
+
+<br>
 
 ### About
 I received a BS degree in Molecular Biology from [University of California, San Diego](https://www.ucsd.edu/) in 2020. I am currently a second-year MPH student in Biostatistics at [Columbia University Mailman School of Public Health](https://www.publichealth.columbia.edu/). 
 
 I am currently working with [Dr. R. Todd Ogden](https://www.publichealth.columbia.edu/people/our-faculty/to166) on functional data modeling of melatonin cycle. 
 
+For more detailed experience, here's my [resume](resume.html) page. 
+
+
+
+<br>
+
+
+
+
 ### Contact Information
-Yingchen Xu
+Yingchen Xu <br>
 Email: [yx2711@cumc.columbia.edu](mailto:yx2711@cumc.columbia.edu)  
 Phone: 858-717-7212
 
 
-Here's a direct link to the about page:
-[about](about.html)
+
