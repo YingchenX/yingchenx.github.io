@@ -2,14 +2,16 @@ name: "Yingchen Xu"
 output_dir: "."
 navbar:
   title: "Home"
-  right:
+  left:
     - text: "Resume"
       href: resume.html
     - text: "Plotly"
       href: plotly.html
     - text: "Dashboard"
       href: dashboard.html
-    - icon: fab fa-linkedin
+
+  right:
+    - icon: fa fa-linkedin-square fa-lg
       href: https://www.linkedin.com/in/yingchen-xu-bb0558232/
     - icon: fa-envelope fa-lg
       href: mailto:<yx2711@cumc.columbia.edu>
@@ -17,4 +19,4 @@ navbar:
       href: http://github.com/yingchenx/
 output:
   html_document:
-    theme: flatly
+    theme: sandstone

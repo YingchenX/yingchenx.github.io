@@ -6,8 +6,104 @@ output:
     toc_float: true
 ---
 
+<br>
 
+### Education 
+<p style="text-align:left;">
+    **Columbia University, Mailman School of Public Heath, New York**
+    <span style="float:right;">
+    **Sep 2021-May 2023**
+    </span>
+</p>
 
+* Master of Public Health in Biostatistics, certificated in Advanced Epidemiology
 
+<p style="text-align:left;">
+    **University of California, San Diego**
+    <span style="float:right;">
+    **Sep 2017-Dec 2020**
+    </span>
+</p>
 
-[resume](./resource/Yingchen Xu - Resume.pdf)
+* Bachelor of Science in Molecular Biology
+* Provost Honors: 2017 Fall, 2018 Spring, 2020 Winter, 2020 Spring
+
+<br>
+
+### Skills
+* **R, SAS, SQL**, MATLAB, Google Analytics
+* **Biostatistics analysis, Bioinformatics techniques**
+* **Molecular lab background**, Molecular techniques, Chemical and molecular analysis
+
+<br>
+
+### Working Experiences
+<p style="text-align:left;">
+    **Baiyunshan ChenLiJi Pharmaceutical Factory, Guangzhou, China**
+    <span style="float:right;">
+    **Jul 2019-Sep 2019**
+    </span>
+</p>
+
+* Intern at Microbiology Lab
+
+<p style="text-align:left;">
+    **Guangzhou Foreign Language School, Guangzhou, China**
+    <span style="float:right;">
+    **Feb-Jun 2017, Jul-Aug 2018**
+    </span>
+</p>
+
+* TOEFL, SAT, AP Chemistry Tutor
+
+<br>
+
+### Research Experiences
+<p style="text-align:left;">
+    **Human Behavioral Genetics: Quantitative Approaches**
+    <span style="float:right;">
+    **Jul 2020-Sep 2020**
+    </span>
+</p>
+
+* Online Project-Based Learning Program; Advisor: Prof. Irwin Waldman
+
+<p style="text-align:left;">
+    **Course Final Project: Find-a-gene Project**
+    <span style="float:right;">
+    **Sep 2020-Dec 2020**
+    </span>
+</p>
+
+* BIMM 143 Bioinformatics Laboratory; Advisor: Dr. Barry Grant
+
+<p style="text-align:left;">
+    **The Green Squads Program**
+    <span style="float:right;">
+    **Jun 2022-Aug 2022**
+    </span>
+</p>
+
+* Collaborative learning program conducted by the Shillim Institute
+
+<p style="text-align:left;">
+    **Functional Data Modeling of Melatonin Cycles**
+    <span style="float:right;">
+    **Sep 2021-Present**
+    </span>
+</p>
+
+* MPH Practicum Project; Advisor: Dr. R. Todd Ogden
+
+<br>
+
+### Activities
+
+* Volunteer in Book Beyond Boundaries Organization
+* Member in Ocean Lover Club
+* Member in Euphoria Translation Team
+
+<br>
+
+### Detailed Resume 
+[Resume](./resource/Yingchen Xu - Resume.pdf)
