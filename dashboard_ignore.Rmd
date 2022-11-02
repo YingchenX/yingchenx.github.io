@@ -4,19 +4,19 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
-    source_code: embed
 ---
 
 ```{r setup, include=FALSE}
-library(flexdashboard)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
+library(flexdashboard)
+
+data("rest_inspec")
 ```
 
 ```{r, include=FALSE}
-data("rest_inspec")
-
 plotly_box = rest_inspec %>%
   filter(
     grade == "A", boro != "Missing")
@@ -35,10 +35,10 @@ plotly_scatter = rest_inspec %>%
 ```
 
 
-Column {data-width=650 .tabset}
------------------------------------------------------------------------
+Column {data-width=650}
+-------------------------------------------------------------------------
 
-### The distribution of score by boro
+### Chart A
 
 ```{r}
 plotly_box %>%
@@ -51,6 +51,7 @@ plotly_box %>%
     alpha = .5, text = ~text_label
   ) %>% 
   layout(
+    title = "The distribution of score by boro",
     xaxis = list(title = "Boro"),
     yaxis = list(title = "Score"),
     legend = list(title = list(text = '<b> Boro </b>'), y = 0.5))
@@ -58,12 +59,15 @@ plotly_box %>%
 ```
 
 
-Column {data-width=350}
------------------------------------------------------------------------
 
-### The number of A grade restaurants in Manhattan
+Column {data-width=350}
+-------------------------------------------------------------------------
+
+
+### Chart B
 
 ```{r}
+
 plotly_bar %>% 
 mutate(
     text_label = str_c("Number: ", n),
@@ -75,14 +79,17 @@ mutate(
     alpha = .5, text = ~text_label
   ) %>% 
   layout(
+    title = "The number of A grade restaurant in Manhattan",
     xaxis = list(title = "Cuisine Type"),
     yaxis = list(title = "Count"),
-    legend = list(title = list(text = '<b> Cuisine Type </b>')))
+    legend = list(title = list(text = '<b> Cuisine Type </b>'), y = 0.5))
 ```
 
-### The distribution of score by grade date
+
+### Chart C
 
 ```{r}
+
 plotly_scatter %>% 
   mutate(
     text_label = str_c("Grade: ", grade, "\nScore: ", score)
@@ -93,8 +100,8 @@ plotly_scatter %>%
     alpha = 1, text = ~text_label
   ) %>% 
   layout(
+    title = "The distribution of score by grade date",
     xaxis = list(title = "Grade Date"),
     yaxis = list(title = "Score"),
     legend = list(title = list(text = '<b> Grade </b>'), y = 0.5))
 ```
-

@@ -81,7 +81,7 @@ plotly_bar = rest_inspec %>%
 
 plotly_bar = plotly_bar %>% 
   layout(
-    title = "The number of A grade restaurant in Manhattan",
+    title = "The number of A grade restaurants in Manhattan",
     xaxis = list(title = "Cuisine Type"),
     yaxis = list(title = "Count"),
     legend = list(title = list(text = '<b> Cuisine Type </b>'), y = 0.5))
@@ -94,7 +94,7 @@ plotly_bar
 ### Plotly Scatterplot 
 
 
-Lastly, we can take a closer look at the score distribution of all Chinese restaurants in Manhattan by grade date using a Plotly Scatterplot. 
+Lastly, we can take a closer look at the score distribution of all Chinese restaurants in Manhattan by grade date using a Plotly scatterplot. 
 ```{r}
 
 plotly_scatter = rest_inspec %>% 
