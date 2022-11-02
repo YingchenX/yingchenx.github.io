@@ -1,12 +1,17 @@
 ---
 title: "Plotly"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 <br>
 
-### NYC Restaurant Inspection
+## NYC Restaurant Inspection
 
+
+Use the `NYC Restaurant Inspections` to create three distinct plot types using `plotly`.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
@@ -23,15 +28,16 @@ data("rest_inspec")
 
 <br>
 
-#### Plotly Boxplot 
+### Plotly Boxplot 
 
+
+First, we want to take a look at the score distribution of A grade restaurants by each boro using a Plotly boxplot.
 ```{r}
 plotly_box = rest_inspec %>%
   filter(
     grade == "A", boro != "Missing") %>% 
   mutate(
-    text_label = str_c("Score: ", score),
-    boro = fct_reorder(boro, score)
+    text_label = str_c("Score: ", score)
   ) %>% 
   plot_ly(
     y = ~score, color = ~boro,
@@ -39,7 +45,11 @@ plotly_box = rest_inspec %>%
     alpha = .5, text = ~text_label
   )
 
-plotly_box = plotly_box %>% layout(legend = list(orientation = 'h'))
+plotly_box = plotly_box %>% 
+  layout(
+    title = "The distribution of score by boro",
+    xaxis = list(title = "Boro"),
+    yaxis = list(title = "Score"))
 
 plotly_box
 
@@ -47,9 +57,12 @@ plotly_box
 
 <br>
 
-#### Plotly Barchart
+### Plotly Barchart
 
+
+Then, we want to take a look at the counts of A grade restaurants (n > 1000) in Manhattan by each cuisine type using a Plotly barchart.
 ```{r}
+
 plotly_bar = rest_inspec %>% 
   filter(grade == "A", boro == "MANHATTAN", cuisine_description != "Not Listed/Not Applicable") %>% 
   count(cuisine_description) %>% 
@@ -64,14 +77,23 @@ plotly_bar = rest_inspec %>%
     type = "bar", mode = "markers",
     alpha = .5, text = ~text_label
   )
-  
+
+plotly_bar = plotly_bar %>% 
+  layout(
+    title = "The number of A grade restaurant in Manhattan",
+    xaxis = list(title = "Cuisine Type"),
+    yaxis = list(title = "Count"),
+    legend = list(title = list(text = '<b> Cuisine Type </b>')))
 
 plotly_bar
 ```
 
 <br>
 
-#### Plotly Scatterplot 
+### Plotly Scatterplot 
+
+
+Lastly, we can take a closer look at the score distribution of all Chinese restaurants in Manhattan by grade date using a Plotly Scatterplot. 
 ```{r}
 
 plotly_scatter = rest_inspec %>% 
@@ -81,12 +103,17 @@ plotly_scatter = rest_inspec %>%
     text_label = str_c("Grade: ", grade, "\nScore: ", score)
   ) %>% 
   plot_ly(
-    x = ~score, y = ~grade, color = ~action,
+    x = ~grade_date, y = ~score, color = ~grade,
     type = "scatter", mode = "markers",
     alpha = 1, text = ~text_label
   )
 
-plotly_scatter = plotly_scatter %>% layout(legend = list(orientation = 'h'))
+plotly_scatter = plotly_scatter %>% 
+  layout(
+    title = "The distribution of score by grade date",
+    xaxis = list(title = "Grade Date"),
+    yaxis = list(title = "Score"),
+    legend = list(title = list(text = '<b> Grade </b>')))
 
 plotly_scatter
 ```
