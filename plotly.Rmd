@@ -17,20 +17,66 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
+
+data("rest_inspec")
 ```
 
+<br>
 
+#### Plotly Boxplot 
 
 ```{r}
-data("rest_inspec")
-
-mht_chinese = rest_inspec %>% 
+plotly_box = rest_inspec %>%
   filter(
-    boro == "MANHATTAN", str_detect(cuisine_description, "[Cc][Hh][Ii][Nn][Ee][Ss][Ee]"))
+    grade == "A", boro != "Missing") %>% 
+  mutate(
+    text_label = str_c("Score: ", score),
+    boro = fct_reorder(boro, score)
+  ) %>% 
+  plot_ly(
+    y = ~score, color = ~boro,
+    type = "box", mode = "markers",
+    alpha = .5, text = ~text_label
+  )
 
+plotly_box = plotly_box %>% layout(legend = list(orientation = 'h'))
 
-plotly_mc = mht_chinese %>% 
-  filter(grade %in% c("A", "B", "C", "P", "Z")) %>% 
+plotly_box
+
+```
+
+<br>
+
+#### Plotly Barchart
+
+```{r}
+plotly_bar = rest_inspec %>% 
+  filter(grade == "A", boro == "MANHATTAN", cuisine_description != "Not Listed/Not Applicable") %>% 
+  count(cuisine_description) %>% 
+  filter(n > 1000) %>% 
+  mutate(
+    text_label = str_c("Number: ", n),
+    cuisine_description = recode(cuisine_description, "Latin (Cuban, Dominican, Puerto Rican, South & Central American)" = "Latin"),
+    cuisine_description = fct_reorder(cuisine_description, n)
+  ) %>% 
+  plot_ly(
+    x = ~cuisine_description, y = ~n, color = ~cuisine_description,
+    type = "bar", mode = "markers",
+    alpha = .5, text = ~text_label
+  )
+  
+
+plotly_bar
+```
+
+<br>
+
+#### Plotly Scatterplot 
+```{r}
+
+plotly_scatter = rest_inspec %>% 
+  filter(
+    boro == "MANHATTAN", str_detect(cuisine_description, "[Cc][Hh][Ii][Nn][Ee][Ss][Ee]"), grade != "Not Yet Graded") %>% 
   mutate(
     text_label = str_c("Grade: ", grade, "\nScore: ", score)
   ) %>% 
@@ -40,8 +86,13 @@ plotly_mc = mht_chinese %>%
     alpha = 1, text = ~text_label
   )
 
-plotly_mc = plotly_mc %>% layout(legend = list(orientation = 'h'))
+plotly_scatter = plotly_scatter %>% layout(legend = list(orientation = 'h'))
 
-plotly_mc
+plotly_scatter
 ```
+
+
+
+
+
 
