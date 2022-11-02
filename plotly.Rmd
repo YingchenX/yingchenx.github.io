@@ -11,7 +11,7 @@ output:
 ## NYC Restaurant Inspection
 
 
-Use the `NYC Restaurant Inspections` to create three distinct plot types using `plotly`.
+Use the `NYC Restaurant Inspections` dataset to create three distinct plot types using `plotly`.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
@@ -49,7 +49,8 @@ plotly_box = plotly_box %>%
   layout(
     title = "The distribution of score by boro",
     xaxis = list(title = "Boro"),
-    yaxis = list(title = "Score"))
+    yaxis = list(title = "Score"),
+    legend = list(title = list(text = '<b> Boro </b>'), y = 0.5))
 
 plotly_box
 
@@ -83,7 +84,7 @@ plotly_bar = plotly_bar %>%
     title = "The number of A grade restaurant in Manhattan",
     xaxis = list(title = "Cuisine Type"),
     yaxis = list(title = "Count"),
-    legend = list(title = list(text = '<b> Cuisine Type </b>')))
+    legend = list(title = list(text = '<b> Cuisine Type </b>'), y = 0.5))
 
 plotly_bar
 ```
@@ -113,13 +114,19 @@ plotly_scatter = plotly_scatter %>%
     title = "The distribution of score by grade date",
     xaxis = list(title = "Grade Date"),
     yaxis = list(title = "Score"),
-    legend = list(title = list(text = '<b> Grade </b>')))
+    legend = list(title = list(text = '<b> Grade </b>'), y = 0.5))
 
 plotly_scatter
 ```
 
 
+<br>
 
+## Other Materials
+
+Go to [Landing Page](index.html). <br>
+Go to [Resume](resume.html). <br>
+Go to [Dashboard](dashboard.html).
 
 
 

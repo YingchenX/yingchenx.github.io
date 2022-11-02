@@ -105,5 +105,9 @@ output:
 
 <br>
 
-### Detailed Resume 
-[Resume](./resource/Yingchen Xu - Resume.pdf)
+### Other Materials 
+
+Go to [Detailed Resume](./resource/Yingchen Xu - Resume.pdf). <br>
+Go to [Landing Page](index.html). <br>
+Go to [Plotly](plotly.html). <br>
+Go to [Dashboard](dashboard.html).

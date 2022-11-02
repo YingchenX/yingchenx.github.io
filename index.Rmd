@@ -38,5 +38,10 @@ Yingchen Xu <br>
 Email: [yx2711@cumc.columbia.edu](mailto:yx2711@cumc.columbia.edu)  
 Phone: 858-717-7212
 
+<br>
 
+### Other Materials
+Go to [Resume](resume.html). <br>
+Go to [Plotly](plotly.html). <br>
+Go to [Dashboard](dashboard.html).
 
